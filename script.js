@@ -60,3 +60,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+// Active link //
+document.addEventListener("DOMContentLoaded", function () {
+  // get the current page filename (e.g. "about.html")
+  let currentPage = window.location.pathname.split("/").pop();
+
+  // if on root domain, treat as "index.html"
+  if (currentPage === "") currentPage = "index.html";
+
+  // loop over nav links
+  document.querySelectorAll(".nav-link").forEach(link => {
+    // clean any existing 'active'
+    link.classList.remove("active");
+
+    // compare href with current page
+    const linkPage = link.getAttribute("href").split("/").pop();
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});

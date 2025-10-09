@@ -14,6 +14,7 @@
 body{
   background-color: var(--background-color) !important;
   font-family: var(--body-font);
+  padding-top: 80px;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: var(--heading-font);
@@ -44,14 +45,14 @@ h1,h2,h3,h4,h5,h6{
 
 /* header section */
 #header{
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .navbar{
-  background-color: var(--background-color) !important;
   padding: 15px 0 !important;
+  background-color: var(--background-color);
 }
 .navbar .navbar-nav .nav-link{
   color: #fff;
@@ -96,9 +97,8 @@ h1,h2,h3,h4,h5,h6{
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
-  background-color: var(--surface-color);
+  background-color: var(--surface-color) !important;
 }
-/* Show dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
   display: block !important;
   opacity: 1;
@@ -157,7 +157,7 @@ h1,h2,h3,h4,h5,h6{
   background: var(--surface-color);
   padding: 15px 20px;
   font-size: 1rem;
-  box-shadow: 0 3px 20px #fff;
+  box-shadow: 0 1px 8px #fff;
   animation: float 4s ease-in-out infinite;
 }
 .animated-design {
